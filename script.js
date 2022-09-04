@@ -33,3 +33,13 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+const btnScroll=document.querySelector('.btn--scroll-to');
+const section1=document.querySelector('#section--1');
+btnScroll.addEventListener('click',function(){
+  section1.scrollIntoView(
+    {
+      behavior:'smooth'
+    }
+  );
+});
+
