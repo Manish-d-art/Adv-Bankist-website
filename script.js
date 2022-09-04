@@ -33,6 +33,8 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+
+//smooth scroll
 const btnScroll=document.querySelector('.btn--scroll-to');
 const section1=document.querySelector('#section--1');
 btnScroll.addEventListener('click',function(){
@@ -43,3 +45,11 @@ btnScroll.addEventListener('click',function(){
   );
 });
 
+// page naigation
+document.querySelector('.nav__links').addEventListener('click',function(e){
+  e.preventDefault();
+  if(e.target.classList.contains('nav__link')){
+    const id=e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({behavior:'smooth'});
+  };
+});
