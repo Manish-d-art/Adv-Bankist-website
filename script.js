@@ -103,3 +103,18 @@ nav.addEventListener('mouseout',Handleover.bind(1));
 //    Handleover(e,1);
 //  });
  
+
+//sticky navigation
+// section1=docum.querySelector('#section--1');
+const initialcoords=section1.getBoundingClientRect();
+window.addEventListener('scroll',function(){
+  // console.log(initialcoords.top);
+  // console.log(window.scrollY);
+  if(window.scrollY > initialcoords.top){
+    nav.classList.add('sticky');
+  }else{
+    nav.classList.remove('sticky');
+  }
+});
+
+
