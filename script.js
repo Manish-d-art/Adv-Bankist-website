@@ -79,7 +79,7 @@ tabsContainer.addEventListener('click',function(e){
 //Menu fade navigation
 const nav=document.querySelector('.nav');
 nav.addEventListener('mouseover',function(e){
-  if(e.target.contains('nav__link')){
+  if(e.target.classList.contains('nav__link')){
     const link=e.target;
     const siblings=link.closest('.nav').querySelectorAll('.nav__link');
     const logo=link.closest('.nav').querySelector('img');
