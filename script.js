@@ -77,4 +77,10 @@ tabsContainer.addEventListener('click',function(e){
 });
 
 //Menu fade navigation
-
+const nav=document.querySelector('.nav');
+nav.addEventListener('mouseover',function(e){
+  if(e.target.contains('nav__link')){
+    const link=e.target;
+    
+  }
+})
