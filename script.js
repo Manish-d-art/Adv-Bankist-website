@@ -48,7 +48,6 @@ btnScroll.addEventListener('click',function(){
 // page naigation
 document.querySelector('.nav__links').addEventListener('click',function(e){
   e.preventDefault();
-
   //matching strategy
   if(e.target.classList.contains('nav__link')){
     const id=e.target.getAttribute('href');
@@ -77,4 +76,5 @@ tabsContainer.addEventListener('click',function(e){
 
 });
 
+//Menu fade navigation
 
