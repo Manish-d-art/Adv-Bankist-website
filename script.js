@@ -77,17 +77,25 @@ tabsContainer.addEventListener('click',function(e){
 });
 
 //Menu fade navigation
-const nav=document.querySelector('.nav');
-nav.addEventListener('mouseover',function(e){
+
+const Handleover=function(e,opacity){
   if(e.target.classList.contains('nav__link')){
     const link=e.target;
     const siblings=link.closest('.nav').querySelectorAll('.nav__link');
     const logo=link.closest('.nav').querySelector('img');
     siblings.forEach(el => {
       if(el !== link){
-        el.style.opacity=0.5;
+        el.style.opacity=opacity;
       }
     });
-    logo.style.opacity=0.5;
+    logo.style.opacity=opacity;
   }
+};
+const nav=document.querySelector('.nav');
+nav.addEventListener('mouseover',function(e){
+ Handleover(e,0.5);
 });
+
+nav.addEventListener('mouseout',function(e){
+  Handleover(e,1);
+})
