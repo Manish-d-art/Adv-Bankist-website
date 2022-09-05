@@ -105,32 +105,6 @@ nav.addEventListener('mouseout',Handleover.bind(1));
  
 
 //sticky navigation
-// section1=docum.querySelector('#section--1');
-const initialcoords=section1.getBoundingClientRect();
-window.addEventListener('scroll',function(){
-  // console.log(initialcoords.top);
-  // console.log(window.scrollY);
-  if(window.scrollY > initialcoords.top){
-    nav.classList.add('sticky');
-  }else{
-    nav.classList.remove('sticky');
-  }
-});
 
 
-//intersection observer
-const obsCallback=function(entries,observer){
-  entries.forEach(entry => {
-    console.log(entry);
-  });
-};
-
-const obsOptions={
-  root:null,
-  // threshold:0.1,
-  threshold:[0,0.2],
-}
-
-const observer=new IntersectionObserver(obsCallback,obsOptions);
-observer.observe(section1);
 
