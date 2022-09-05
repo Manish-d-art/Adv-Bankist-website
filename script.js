@@ -92,7 +92,7 @@ const Handleover=function(e){
   }
 };
 nav.addEventListener('mouseover',Handleover.bind(0.5));
-nav.addEventListener('mouseover',Handleover.bind(1));
+nav.addEventListener('mouseout',Handleover.bind(1));
 
 
 // nav.addEventListener('mouseover',function(e){
