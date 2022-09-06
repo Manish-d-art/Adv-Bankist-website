@@ -105,8 +105,6 @@ nav.addEventListener('mouseout',Handleover.bind(1));
  
 
 //sticky navigation
-
-
 const header=document.querySelector('.header');
 const stickyNav=function(entries){
   const [entry]=entries;
@@ -124,3 +122,22 @@ const headerObserver=new IntersectionObserver(stickyNav,{
 });
 
 headerObserver.observe(header);
+
+//reveal sections
+const allSections=document.querySelector('.section');
+
+const revealSection=function(entries,observer){
+  const[entry]=entries;
+
+  if(!entry.isIntersecting)return;
+  entry.target.classList.remove('section--hidden');
+};
+
+const sectionOserver=new IntersectionObserver(
+  revealSection,{
+    root:null,
+    threshold:0.15,
+  }
+);
+
+
