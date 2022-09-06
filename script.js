@@ -124,7 +124,7 @@ const headerObserver=new IntersectionObserver(stickyNav,{
 headerObserver.observe(header);
 
 //reveal sections
-const allSections=document.querySelector('.section');
+const allSections=document.querySelectorAll('.section');
 
 const revealSection=function(entries,observer){
   const[entry]=entries;
@@ -140,4 +140,7 @@ const sectionOserver=new IntersectionObserver(
   }
 );
 
-
+allSections.forEach(function(section){
+  sectionOserver.observe(section);
+  section.classList.add('section--hidden');
+});
