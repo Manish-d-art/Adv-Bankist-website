@@ -242,7 +242,6 @@ btnLeft.addEventListener('click',prevSlide);
 document.addEventListener('keydown',function(e){
   e.key === 'ArrowLeft' && prevSlide();
   e.key === 'ArrowRight' && nextSlide();
-  console.log('yes');
 });
 
 dotContainer.addEventListener('click',function(e){
@@ -251,6 +250,4 @@ dotContainer.addEventListener('click',function(e){
     goToSlide(slide);
     activateDot(slide);
   }
-})
-
-
+});
